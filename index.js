@@ -74,6 +74,13 @@ $(document).keypress(function(event){
   labelButtons(omega);
 });
 
+$("h1").click(function(){
+  $("#level-title").text("click a box to start");
+  revealed = [];
+  omega = shuffle(baseArray);
+  labelButtons(omega);
+});
+
 
 
 
@@ -143,7 +150,7 @@ function gameOver(){
     $("body").removeClass("game-over");
   }, 200);
 
-  $("#level-title").text("game over, press any key to restart");
+  $("#level-title").text("game over, click here to restart");
 
   checkSystem = [];
   blink = [];
